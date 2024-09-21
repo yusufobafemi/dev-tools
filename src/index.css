@@ -1,0 +1,130 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 225 25% 97%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 229 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 229 84% 5%;
+
+    --primary: 250 95% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 229 48% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8% 46%;
+
+    --accent: 245 100% 90%;
+    --accent-foreground: 229 48% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 90%;
+    --input: 220 13% 90%;
+    --ring: 250 95% 60%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 250 95% 60%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 0 0% 100%;
+    --sidebar-primary-foreground: 250 95% 60%;
+    --sidebar-accent: 245 100% 75%;
+    --sidebar-accent-foreground: 250 50% 40%;
+    --sidebar-border: 250 30% 70%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --code-background: 230 15% 15%;
+    --code-foreground: 60 30% 96%;
+    
+    --tool-active: 250 95% 65%;
+    --tool-hover: 245 100% 90%;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 225 25% 97%;
+
+    --card: 229 84% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 229 84% 5%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 250 95% 65%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 229 48% 11%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 229 48% 11%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 250 50% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 229 48% 15%;
+    --input: 229 48% 15%;
+    --ring: 250 95% 65%;
+    
+    --sidebar-background: 230 30% 15%;
+    --sidebar-foreground: 225 25% 97%;
+    --sidebar-primary: 250 95% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 250 50% 20%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 230 30% 20%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    --code-background: 230 15% 15%;
+    --code-foreground: 60 30% 96%;
+    
+    --tool-active: 250 95% 65%;
+    --tool-hover: 250 50% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  .tool-card {
+    @apply p-5 rounded-lg border border-border bg-card transition-all duration-200 hover:shadow-md dark:hover:shadow-primary/5 hover:-translate-y-0.5;
+  }
+  
+  pre {
+    @apply bg-code text-code-foreground p-4 rounded-md overflow-x-auto;
+  }
+
+  .tool-navigation-item {
+    @apply rounded-md px-3 py-2 transition-colors flex items-center;
+  }
+  
+  .tool-navigation-item:hover {
+    @apply bg-tool-hover text-primary;
+  }
+  
+  .tool-navigation-item.active {
+    @apply bg-tool-active text-white font-medium;
+  }
+}
