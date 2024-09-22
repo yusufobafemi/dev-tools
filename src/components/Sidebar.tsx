@@ -73,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         </ul>
         <div className="pt-3 mt-3 border-t border-sidebar-border">
           <a 
-            href="https://github.com/yourusername/dev-toolbox" 
+            href="https://github.com/yusufobafemi/dev-toolbox" 
             target="_blank" 
             rel="noopener noreferrer"
             className={cn(

@@ -60,7 +60,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <p>
             Dev Toolbox &copy; {new Date().getFullYear()} |{' '}
             <a 
-              href="https://github.com/yourusername/dev-toolbox" 
+              href="https://github.com/yusufobafemi/dev-toolbox" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-primary hover:underline"
